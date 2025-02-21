@@ -1,0 +1,48 @@
+CREATE DATABASE remito;
+USE remito;
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    domicilio VARCHAR(50),
+    localidad VARCHAR(50),
+    nombre VARCHAR(50)
+);
+
+CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(50),
+    precio_unitario DOUBLE,
+    stock INT
+);
+
+CREATE TABLE remitos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    fecha DATE,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id)
+);
+
+CREATE TABLE remitos_productos (
+    id_producto INT,
+    id_remito INT,
+    cantidad INT,
+    PRIMARY KEY (id_producto, id_remito),
+    FOREIGN KEY (id_producto) REFERENCES productos(id),
+    FOREIGN KEY (id_remito) REFERENCES remitos(id)
+);
+
+INSERT INTO clientes (domicilio, localidad, nombre) VALUES
+('Calle Falsa 123', 'Springfield', 'Juan Pérez'),
+('Av. Siempre Viva 742', 'Shelbyville', 'María López');
+
+INSERT INTO productos (descripcion, precio_unitario, stock) VALUES
+('Producto A', 100.50, 10),
+('Producto B', 200.75, 5);
+
+INSERT INTO remitos (id_cliente, fecha) VALUES
+(1, '2024-02-21'),
+(2, '2024-02-22');
+
+INSERT INTO remitos_productos (id_producto, id_remito, cantidad) VALUES
+(1, 1, 2),
+(2, 2, 3);
