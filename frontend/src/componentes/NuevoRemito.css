@@ -1,0 +1,114 @@
+/* Contenedor principal */
+.nuevo-remito-container {
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Título */
+  .nuevo-remito-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Etiquetas y campos */
+  .nuevo-remito-container label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #444;
+  }
+  
+  .nuevo-remito-container input,
+  .nuevo-remito-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+  }
+  
+  .nuevo-remito-container input:focus,
+  .nuevo-remito-container select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Botón principal */
+  .nuevo-remito-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .nuevo-remito-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Tabla de productos seleccionados */
+  .productos-seleccionados {
+    margin-top: 20px;
+  }
+  
+  .productos-seleccionados table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .productos-seleccionados th,
+  .productos-seleccionados td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .productos-seleccionados th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .productos-seleccionados tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Input de cantidad */
+  .productos-seleccionados input {
+    width: 50px;
+    text-align: center;
+  }
+  
+  /* Botón eliminar */
+  .btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #a71d2a;
+  }
+  
+  /* Mensaje cuando no hay productos */
+  .no-productos {
+    text-align: center;
+    color: #666;
+    margin-top: 10px;
+  }
